@@ -21,11 +21,6 @@ class Test(unittest.TestCase):
 		f = files.files('test.jpg')
 		self.assertEqual(f.BASEPATH, '/app/img')			
 
-	#домен должен быть img.kolgot.net
-	def test_domain_name(self):
-		f = files.files('test.jpg')
-		self.assertEqual(f.DOMAIN, 'https://img.kolgot.net')	
-
 	#не должно быть папки /app/img
 	def test_is_folder_img(self):
 		self.assertEqual(os.path.isdir("../app/img"), False)
