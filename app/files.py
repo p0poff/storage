@@ -45,7 +45,10 @@ class files:
 		def getPattern():
 			pattern = '%s-w*' % (self.__name[:-4])
 			return pattern
-		listOfFiles = os.listdir(self.getPath())  
+		try:
+			listOfFiles = os.listdir(self.getPath())  
+		except:
+			listOfFiles = []
 		pattern = getPattern()
 		return [x for x in listOfFiles if fnmatch.fnmatch(x, pattern)]
 
