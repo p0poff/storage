@@ -4,9 +4,9 @@ import fnmatch
 
 class files:
 	def __init__(self, name):
-		self.BASEPATH = '/app/img'
-		self.SITEPATH = '/img'
-		self.DOMAIN = 'http://example.domain'
+		self.BASEPATH = os.environ.get('BASEPATH', '/app/img')
+		self.SITEPATH = os.environ.get('SITEPATH', '/img')
+		self.DOMAIN = os.environ.get('DOMAIN', 'http://example.domain')
 		self.__name = name
 
 	def __getMD5DirName(self):

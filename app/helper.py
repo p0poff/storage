@@ -4,9 +4,10 @@ import PIL
 from flask import send_file
 import resize
 import re
+import os
 class work:
 	def __init__(self, **args):
-		self.__validKey = 'access key'
+		self.__validKey = os.environ.get('ACCESSKEY', 'access key')
 		self.__data = args.get('data', False)
 		self.__key = args.get('key', '')
 
@@ -21,7 +22,7 @@ class work:
 
 	def get(self, name):
 		f = files.files(name)
-		return self.send(f.getPathFile())
+		return self.send(f.getSitePathFile())
 
 	def upload(self):
 		filename = self.__data['fileToUpload'].filename

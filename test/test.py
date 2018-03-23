@@ -11,12 +11,6 @@ class Test(unittest.TestCase):
 	# hello world
 	def test_hello(self):
 		self.assertEqual('%s - %s' % ('hello', 'world'), 'hello - world')
-############################HELPER#####################################
-	# ключ должен совпадать с эталоном 
-	def test_valid_key(self):
-		h = helper.work(key = '834hf834h8348734h87348732047')
-		self.assertTrue(h.valid())	
-
 ############################FILES#####################################
 	def test_get_path_md5(self):
 		f = files.files('test.jpg')
