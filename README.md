@@ -2,9 +2,10 @@
 images storage with resize
 
 # build
+```bash
 docker build -t python-flask-storage .
 docker run --name storage -v /home/data:/app/img -e DOMAIN="http://domain.com" -e ACCESSKEY="secretword" -d -p 80:80 python-flask-storage
-
+```
 > **/home/data** - _your local storage directory_
 
 # Environment variables
