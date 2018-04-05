@@ -12,7 +12,7 @@ class files:
 	def __getMD5DirName(self):
 		m = hashlib.md5()
 		m.update(self.__name.encode('utf-8'))
-		return m.hexdigest()[0:3]
+		return m.hexdigest()[0:2]
 
 	def getPathFile(self, subFile=False):
 		return '%s%s' % (self.getPath(), self.__name if subFile == False else subFile)
