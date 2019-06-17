@@ -31,7 +31,7 @@ class files:
 		return os.path.exists(self.getPath())
 
 	def isFile(self, subFile=False):
-		return os.path.exists('%s/%s' % (self.getPath(), self.__name if subFile == False else subFile))
+		return os.path.exists('%s%s' % (self.getPath(), self.__name if subFile == False else subFile))
 
 	def createDir(self, directory):
 		if not os.path.exists(directory):

@@ -60,7 +60,7 @@ class work:
 		else:
 			d['w'] = '0'
 			d['h'] = '0'
-		d['name'] = name[4:].replace('-w%s-h%s' % (d['w'], d['h']), '')
+		d['name'] = name[3:].replace('-w%s-h%s' % (d['w'], d['h']), '')
 		return d
 
 
